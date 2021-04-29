@@ -3,13 +3,14 @@ use std::cmp::Ordering;
 use rand::Rng;
 
 fn main() {
+    let rand_upper_bound = 101;
+    let expect_message = "Failed to read line!";
+    
     println!("Can you guess the correct number?");
     println!("");
     println!("Please input your number: ->");
 
     let mut your_guess = String::new();
-    let rand_upper_bound = 101;
-    let expect_message = "Failed to read line!";
     let secret_guess = rand::thread_rng().gen_range(1..rand_upper_bound);
 
     println!("Secret number was: {}", secret_guess);
